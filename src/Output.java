@@ -9,8 +9,8 @@ public class Output {
 	
 	private void printLabel() {
 		System.out.println("<<<<센텀대학교 성적관리프로그램>>>>");
-		System.out.println("학번\t 이름\t 국어\t 영어\t 수학\t 전산\t 총점\t 평균\t 평점");
-		System.out.println("--------------------------------------------------");
+		System.out.println("학번\t\t 이름\t\t 국어\t\t 영어\t\t 수학\t\t 전산\t\t 총점\t\t 평균\t\t 평점");
+		System.out.println("----------------------------------------------------");
 	}
 
 }

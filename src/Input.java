@@ -1,14 +1,54 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Input {
 	private Student[] array;
 	private Scanner sc;
+	private File file; 
+	private BufferedReader br;
 
 	public Input(Student[] array) {
 		this.array = array;
-		this.sc = new Scanner(System.in);
+		try {
+			this.file = new File("C://Temp//sungjuk_utf8.dat");
+		this.br = new BufferedReader(new FileReader(this.file));
+		}catch(FileNotFoundException e) {
+			System.out.println("File Not Found");
+		}
 
 	}
+	public int fileInput() {
+		int count = 0;
+		String line = null;
+		while(true) {
+			count++;
+			try {
+				line = this.br.readLine();
+				//System.out.println(line);
+				//1101  한송이  78  87  83  87
+				String [] lines = line.split("\\s+");
+				System.out.println(lines[0]);
+				System.out.println(lines[1]);
+				System.out.println(lines[2]);
+				System.out.println(lines[3]);
+				System.out.println(lines[4]);
+				System.out.println(lines[5]);
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if(line == null)break;
+		}
+		return count-1;
+	}
+	
+	
+	
 
 	public int input() {
 		String io = null;
