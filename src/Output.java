@@ -1,9 +1,10 @@
+import java.util.List;
 
 public class Output {
-	public void print(Student [] array, int count) {
+	public void print(List<Student> list) {
 		this.printLabel();
-		for(int i = 0; i<count; i++) {
-			System.out.println(array[i]); //실제로는 이렇게 들어옴 array[i].toString()  재정의한 toString()
+		for(Student student : list) {
+			System.out.println(student); // student.toString()  재정의한 toString()
 		}
 	}
 	
